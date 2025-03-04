@@ -97,7 +97,7 @@ Endpoint: POST /book/
 
 Request Body Example:
 
-```json
+
 {
     "name": "John Doe",
     "phone_number": "+1234567890",
@@ -108,7 +108,7 @@ Request Body Example:
 Response Example:
 
 {
-  ```json
+  
 {
     "name": "John Doe",
     "phone_number": "+1234567890",
