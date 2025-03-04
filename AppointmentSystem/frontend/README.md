@@ -109,11 +109,11 @@ Response Example:
 }
 🎯 Usage Instructions
 
-1️⃣ Open the web application in your browser.
-2️⃣ Select a date to view available slots.
-3️⃣ Choose a time slot and enter your details.
-4️⃣ Click "Book Appointment".
-5️⃣ Receive a confirmation message upon successful booking.
+1️⃣ Open the web application in your browser.<br>
+2️⃣ Select a date to view available slots.<br>
+3️⃣ Choose a time slot and enter your details.<br>
+4️⃣ Click "Book Appointment".<br>
+5️⃣ Receive a confirmation message upon successful booking.<br>
 
 
 📜 License
