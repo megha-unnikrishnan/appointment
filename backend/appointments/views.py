@@ -8,7 +8,7 @@ from .models import Appointment  # Ensure your model is correctly imported
 
 # Define available slots (Example: Every hour from 9 AM to 5 PM)
 AVAILABLE_SLOTS = [
-    datetime.strptime(f"{hour}:00", "%H:%M").time() for hour in range(9, 18)
+    datetime.strptime(f"{hour}:00", "%H:%M").time() for hour in range(10, 17)
 ]
 
 @api_view(["GET"])
