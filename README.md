@@ -80,7 +80,6 @@ Endpoint: GET /slots/?date=YYYY-MM-DD
 
 Response Example:
 
-```json
 {"available_slots":["10:00","11:00","11:30","12:00","12:30","02:00","02:30","03:00","03:30","04:00","04:30"]}
 
 
@@ -112,7 +111,7 @@ Response Example:
 
 1️⃣ Open the web application in your browser.<br>
 2️⃣ Select a date to view available slots.<br>
-3️⃣ Choose a time slot and enter your details..<br>
+3️⃣ Choose a time slot and enter your details.<br>
 4️⃣ Click "Book Appointment".<br>
 5️⃣ Receive a confirmation message upon successful booking.<br>
 
