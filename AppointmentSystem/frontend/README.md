@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+# 📅 Appointment Booking System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Django and React.js-based system for booking appointments efficiently, with an intuitive frontend and a robust backend.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+✅ Book appointments with available time slots <br>
+✅ Secure API for managing bookings<br>
+✅ Responsive UI built with React.js<br>
+✅ Django-powered backend with sqlite<br>
 
-### `npm start`
+### 🛠 Technology Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Backend (Django & DRF)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Django REST Framework (DRF)
 
-### `npm test`
+#### Frontend (React.js)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React.js <br>
+Tailwind CSS for styling<br>
+Axios for API requests<br>
 
-### `npm run build`
+### 📌 Installation & Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 1️⃣ Backend Setup (Django)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+*Step 1: Clone the Repository*
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+    git clone https://github.com/your-username/Appointment_system.git
+    cd appointment-system/backend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+*Step 2: Create a Virtual Environment & Activate It*
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    python -m venv env
+    source env/bin/activate  # Windows: venv\Scripts\activate
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+*Step 3: Install Dependencies*
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    pip install -r requirements.txt
+*Step 4: Apply Database Migrations*
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+    python manage.py migrate <br>
+    python manage.py makemigrations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+*Step 5: Run the Development Server*
 
-### Analyzing the Bundle Size
+python manage.py runserver
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### 🖥 Backend will be available at: http://localhost:8000/
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## 2️⃣ Frontend Setup (React.js)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+*Step 1: Navigate to the Frontend Directory*
 
-### Deployment
+    cd ../frontend
+    cd appointment_system
+    
+*Step 2: Install Dependencies*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    npm install
+    
+*Step 3: Start the React Development Server*
 
-### `npm run build` fails to minify
+    npm start
+    
+#### 🌐 Frontend will be available at: http://localhost:3000/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 🔗 API Endpoints
+
+#### 1️⃣ Get Available Slots
+
+Endpoint: GET /slots/?date=YYYY-MM-DD
+
+Response Example:
+
+{"available_slots":["10:00","11:00","11:30","12:00","12:30","02:00","02:30","03:00","03:30","04:00","04:30"]}
+
+
+#### 2️⃣ Create an Appointment
+
+Endpoint: POST /book/
+
+Request Body Example:
+
+{
+    "name": "John Doe",
+    "phone_number": "+1234567890",
+    "date": "2025-03-05",
+    "time_slot": "14:30"
+}
+
+Response Example:
+
+{
+  {
+    "name": "John Doe",
+    "phone_number": "+1234567890",
+    "date": "2025-03-05",
+    "time_slot": "14:30"
+}
+
+}
+🎯 Usage Instructions
+
+1️⃣ Open the web application in your browser.
+2️⃣ Select a date to view available slots.
+3️⃣ Choose a time slot and enter your details.
+4️⃣ Click "Book Appointment".
+5️⃣ Receive a confirmation message upon successful booking.
+
+
+📜 License
+This project is licensed under the MIT License.
+
