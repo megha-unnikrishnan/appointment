@@ -80,6 +80,7 @@ Endpoint: GET /slots/?date=YYYY-MM-DD
 
 Response Example:
 
+```json
 {"available_slots":["10:00","11:00","11:30","12:00","12:30","02:00","02:30","03:00","03:30","04:00","04:30"]}
 
 
